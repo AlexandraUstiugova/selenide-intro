@@ -11,7 +11,6 @@ public class TodoMvcTest {
 
     @Test
     void completesTask() {
-
         open("http://todomvc.com/examples/emberjs/");
 
         element(By.xpath("//input[@id='new-todo']")).setValue("a").pressEnter();

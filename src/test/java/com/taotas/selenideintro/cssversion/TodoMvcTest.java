@@ -9,7 +9,6 @@ public class TodoMvcTest {
 
     @Test
     void completesTask() {
-
         open("http://todomvc.com/examples/emberjs/");
 
         element("#new-todo").setValue("a").pressEnter();
