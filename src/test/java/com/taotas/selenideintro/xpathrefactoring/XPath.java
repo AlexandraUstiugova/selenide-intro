@@ -20,6 +20,4 @@ public class XPath {
                 "[contains(concat(' ',normalize-space(@class), ' '), ' toggle ')]"))
                 .click();
     }
-
-
 }
