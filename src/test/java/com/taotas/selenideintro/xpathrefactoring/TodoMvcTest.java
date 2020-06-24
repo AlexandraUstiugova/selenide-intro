@@ -1,5 +1,6 @@
 package com.taotas.selenideintro.xpathrefactoring;
 
+import com.taotas.selenideintro.common.xpathselectors.X;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
@@ -13,13 +14,20 @@ public class TodoMvcTest {
     void completesTask() {
         open("http://todomvc.com/examples/emberjs/");
 
-        XPath.createTask("a");
-        XPath.createTask("b");
-        XPath.createTask("c");
-        elements(XPath.taskList).shouldHave(exactTexts("a", "b", "c"));
+        element(By.xpath("//*[@id='new-todo']")).setValue("a").pressEnter();
+        element(By.xpath("//*[@id='new-todo']")).setValue("b").pressEnter();
+        element(By.xpath("//*[@id='new-todo']")).setValue("c").pressEnter();
+        elements(By.xpath("//*[@id='todo-list']//li"))
+                .shouldHave(exactTexts("a", "b", "c"));
 
-        XPath.toggleTask("b");
-        elements(XPath.completedTask).shouldHave(exactTexts("b"));
-        elements(XPath.activeTask).shouldHave(exactTexts("a", "c"));
+        element(By.xpath("//*[@id='todo-list']//li[.//text()='b']//*" +
+                X.filterByCssClass("toggle")))
+                .click();
+        elements(By.xpath("//*[@id='todo-list']//li" +
+                X.filterByCssClass("completed")))
+                .shouldHave(exactTexts("b"));
+        elements(By.xpath("//*[@id='todo-list']//li" +
+                X.filterByNoCssClass("completed")))
+                .shouldHave(exactTexts("a", "c"));
     }
 }
