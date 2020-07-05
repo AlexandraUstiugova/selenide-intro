@@ -1,6 +1,8 @@
-import com.codeborne.selenide.*;
+package com.taotas.selenideintro.lesson;
+
+import com.codeborne.selenide.Browsers;
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Condition.*;

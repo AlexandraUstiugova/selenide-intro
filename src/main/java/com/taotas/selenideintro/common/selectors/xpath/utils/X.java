@@ -1,4 +1,4 @@
-package com.taotas.selenideintro.common.xpathselectors;
+package com.taotas.selenideintro.common.selectors.xpath.utils;
 
 public class X {
 

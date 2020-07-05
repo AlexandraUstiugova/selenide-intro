@@ -1,4 +1,4 @@
-package com.taotas.selenideintro.cssversion;
+package com.taotas.selenideintro.tasks.cssversion;
 
 import org.junit.jupiter.api.Test;
 

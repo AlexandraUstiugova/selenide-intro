@@ -1,3 +1,5 @@
+package com.taotas.selenideintro.lesson;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 

@@ -1,4 +1,4 @@
-package com.taotas.selenideintro.common.xpathdsl;
+package com.taotas.selenideintro.common.selectors.xpath.dsl;
 
 public class Its {
 
@@ -17,7 +17,7 @@ public class Its {
                 ")";
     }
 
-    public static String noCssClass(String value) {
-        return "not(" + cssClass(value) + ")";
+    public static String not(String predicate) {
+        return "not(" + predicate + ")";
     }
 }

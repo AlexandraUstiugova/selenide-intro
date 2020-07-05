@@ -1,6 +1,6 @@
-package com.taotas.selenideintro.xpathrefactoring;
+package com.taotas.selenideintro.tasks.xpathrefactoring;
 
-import com.taotas.selenideintro.common.xpathselectors.X;
+import com.taotas.selenideintro.common.selectors.xpath.utils.X;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 

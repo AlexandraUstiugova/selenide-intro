@@ -1,4 +1,4 @@
-package com.taotas.selenideintro.xpathversion;
+package com.taotas.selenideintro.tasks.xpathversion;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
