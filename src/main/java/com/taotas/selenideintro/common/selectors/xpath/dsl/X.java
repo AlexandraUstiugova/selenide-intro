@@ -18,7 +18,7 @@ public class X {
     }
 
     public X byNot(String predicate) {
-        return this.by(Its.not(predicate));
+        return by(Its.not(predicate));
     }
 
     public X child(String element) {
